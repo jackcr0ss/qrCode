@@ -1,8 +1,9 @@
 import qrcode
 from PIL import Image
+import os
 #needed imports to generate QR Code and open image
 
-#Sourse of url (in future version it will be file download) and a filename input statement
+#Sourse of url (in future version it will be file download) and a filename input
 source = 'https://github.com/jmc8252'
 filename = input('Enter filename for QR Code: ')
 
@@ -17,5 +18,9 @@ qrImage = qr.make_image(fill='black', back_color='white')
 qrImage.save(filename)
 
 #Opens the image file
+
 open = Image.open(filename)
 open.show()
+'''
+os.system(filename)
+'''
